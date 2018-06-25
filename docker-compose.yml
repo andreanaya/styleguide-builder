@@ -1,0 +1,21 @@
+version: "3"
+services:
+  styleguidebuilder:
+    depends_on:
+        - mongo
+    build: ./styleguide-builder
+    container_name: styleguidebuilder
+    environment:
+      - PRIVATE_KEY=/etc/letsencrypt/live/andreanaya.com/privkey.pem
+      - CERTIFICATE=/etc/letsencrypt/live/andreanaya.com/fullchain.pem
+    networks:
+      - docker-network
+  mongo:
+    image: mongo
+    container_name: mongo
+    networks:
+      - docker-network
+
+networks:
+  docker-network:
+    driver: bridge

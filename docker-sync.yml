@@ -1,0 +1,8 @@
+version: "2"
+options:
+  verbose: true
+syncs:
+  server_volume_sync:
+    src: "./server"
+  views_volume_sync:
+    src: "./shared/views"

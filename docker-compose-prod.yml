@@ -1,0 +1,7 @@
+version: "3"
+services:
+  styleguidebuilder:
+    volumes:
+      - /etc/letsencrypt/live/andreanaya.com/fullchain.pem:/etc/letsencrypt/live/andreanaya.com/fullchain.pem
+      - /etc/letsencrypt/live/andreanaya.com/privkey.pem:/etc/letsencrypt/live/andreanaya.com/privkey.pem
+    command: npm run start:prod
