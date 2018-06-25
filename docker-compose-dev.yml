@@ -8,8 +8,8 @@ services:
     volumes:
       - server_volume_sync:/app:nocopy
       - views_volume_sync:/app/views:nocopy
-      - ./certs/fullchain.pem:/etc/letsencrypt/live/andreanaya.com/fullchain.pem
-      - ./certs/privkey.pem:/etc/letsencrypt/live/andreanaya.com/privkey.pem
+      - ../certs/fullchain.pem:/etc/letsencrypt/live/andreanaya.com/fullchain.pem
+      - ../certs/privkey.pem:/etc/letsencrypt/live/andreanaya.com/privkey.pem
 
 volumes:
   server_volume_sync:

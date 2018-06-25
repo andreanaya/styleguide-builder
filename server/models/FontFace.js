@@ -22,7 +22,7 @@ var FontFaceSchema = new Schema({
 			required: true
 		},
 		src: {
-			type: Buffer,
+			type: String,
 			required: true
 		},
 		weight: {

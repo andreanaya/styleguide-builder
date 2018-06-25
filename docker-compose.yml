@@ -3,7 +3,7 @@ services:
   styleguidebuilder:
     depends_on:
         - mongo
-    build: ./styleguide-builder
+    build: .
     container_name: styleguidebuilder
     environment:
       - PRIVATE_KEY=/etc/letsencrypt/live/andreanaya.com/privkey.pem

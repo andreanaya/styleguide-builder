@@ -10,6 +10,8 @@ const path = require('path');
 const handlebars = require('handlebars');
 const helpers = require('/app/views/helpers.js');
 
+const api = require('/app/routes/api.js')
+
 mongoose.connect('mongodb://mongo:27017/style-builder');
 
 let basedir = path.resolve('/app/views');
@@ -55,6 +57,8 @@ app.get('/', (req, res) => {
 		}
 	});
 });
+
+app.use('/api', api);
 
 const privateKey = fs.readFileSync(process.env.PRIVATE_KEY, 'utf8');
 const certificate = fs.readFileSync(process.env.CERTIFICATE, 'utf8');
