@@ -14,9 +14,11 @@ var FontFaceSchema = new Schema({
 		required: true
 	},
 
-	fallback: String,
+	fallback: {
+		type: String
+	},
 
-	styles: [{
+	variants: [{
 		alias: {
 			type: String,
 			required: true

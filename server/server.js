@@ -47,6 +47,10 @@ app.engine('hbs', function (filePath, options, callback) {
 app.set('views', '/app/views');
 app.set('view engine', 'hbs');
 
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+app.use(bodyParser.text());
+
 
 app.get('/', (req, res) => {
 	res.status(200).render('base.hbs', {
